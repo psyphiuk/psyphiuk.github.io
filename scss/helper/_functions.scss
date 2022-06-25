@@ -1,0 +1,14 @@
+/*
+ *  solid-gradient 
+ *  
+ *  Creates an even gradient image to either 
+ *  darken or lighten a background image
+ *
+ */
+
+@function solid-gradient($base: 0, $alpha) {
+  @return linear-gradient(
+    rgba($base,$base,$base,$alpha), 
+    rgba($base,$base,$base,$alpha)
+  );
+}

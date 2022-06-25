@@ -1,0 +1,39 @@
+/*
+ *  solid-gradient 
+ *  
+ *  Creates an even gradient image to either 
+ *  darken or lighten a background image
+ *
+ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+html, body {
+  font-family: "Gentium Plus", serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/golden-shell.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-image .hero-text {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #e2a030;
+}

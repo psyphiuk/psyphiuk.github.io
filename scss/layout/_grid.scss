@@ -1,0 +1,14 @@
+
+
+.golden-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: helper.$golden-ratio + fr 1fr;
+  > div {
+    background-color: #e2a030;
+    flex-grow: 1;
+  }
+  :nth-child(2) {
+    background-color: adjust-color($color: #e3a030, $lightness: 10%);
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "psyphiuk.github.io",
+  "version": "1.0.0",
+  "description": "Psy Phi Developer Personal Website",
+  "main": "index.html",
+  "repository": "https://github.com/psyphiuk/psyphiuk.github.io.git",
+  "author": "PsyPhi <psyphiuk@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass -w --update --no-source-map scss:styles"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0"
+  }
+}

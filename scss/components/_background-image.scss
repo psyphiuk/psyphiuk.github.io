@@ -1,0 +1,12 @@
+@use "../helper" as *;
+
+@mixin faded-background-image($base: 0, $alpha: 0.3, $image-url ) {
+  background-image: solid-gradient($base, $alpha), url($image-url);
+}
+
+@mixin background-image-cover {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
