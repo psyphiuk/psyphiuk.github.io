@@ -1,0 +1,11 @@
+@use "../theme" as *;
+@use "../helpers" as *;
+
+body > main {
+  display: grid;
+  padding-block: $padding;
+
+  @include on-desktop {
+    grid-template-columns: $golden-ratio-left +fr $golden-ratio + fr;
+  }
+}

@@ -1,7 +1,13 @@
-@use "./background-image" as *;
+@use "../helpers/" as *;
+@use "../theme" as *;
 
 .hero-image {
-  @include faded-background-image(255, 0.7, "../images/golden-shell.jpg");
+  &.shell {
+    @include faded-background-image(255, 0.7, "../images/golden-shell.jpg");
+  }
+  &.sunflower {
+    @include faded-background-image(255, 0.7, "../images/sunflower.jpg");
+  }
   @include background-image-cover;
   position: relative;
 
@@ -10,6 +16,6 @@
     display: grid;
     place-content: center;
     text-align: center;
-    color: #e2a030;
+    color: $primary;
   }
 }

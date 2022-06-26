@@ -1,0 +1,35 @@
+@use "./color" as *;
+@use "./variables" as *;
+
+$heading-fonts-family: 'Gentium Plus', serif;
+
+$body-font-family: 'Open Sans', sans-serif;
+
+$monospace-font-family:  'Source Code Pro', monospace;
+
+html, body {
+  font-family: $heading-fonts-family;
+}
+
+a, li, p {
+  font-family: $body-font-family;
+}
+
+code {
+  font-family: $monospace-font-family;
+}
+
+.heading-accent {
+  width: max-content;
+  border-bottom: 2px solid $accent;
+}
+
+ul[role="list"] li + li {
+  padding-top: $list-item-padding;
+}
+
+blockquote {
+  border-left: 8px solid $accent;
+  margin: $padding / 2 0;
+  padding: $padding / 2 40px $padding / 2 * $golden-ratio-bigger;
+}

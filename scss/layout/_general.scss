@@ -1,0 +1,19 @@
+@use "../theme" as *;
+
+#skiptomaincontent {
+  position: absolute;
+
+  &:focus, &:active {
+    position: initial;
+    text-align: center;
+    font-size: 2rem;
+    background-color: $neutral;
+    color: #bbb;
+    text-decoration: none;
+  }
+}
+
+.sticky-top {
+  position: sticky;
+  top: $padding;
+}

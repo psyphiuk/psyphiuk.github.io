@@ -1,0 +1,45 @@
+@use "../theme" as *;
+@use "../helpers" as *;
+
+main > aside {
+  padding-inline: $padding;
+  padding-block-end: $padding;
+  display: inline-grid;
+  position: sticky;
+  top: 0;
+  background-color: $background;
+
+  div {
+    display: inline-grid;
+    justify-items: center;
+  }
+  
+  &:first-child {
+    border-bottom: $divider-size solid $divider-color;
+  }
+
+  &:last-child {
+    border-top: $divider-size solid $divider-color;
+  }
+
+  @include on-desktop {
+    display: block;
+    div {
+      display: inline-grid;
+      justify-items: end;
+    }
+
+    &:first-child {
+      border-bottom: 0;
+      border-right: $divider-size solid $divider-color;
+      text-align: right;
+      padding-right: $inner-padding;
+      padding-left: $outer-padding;
+    }
+
+    &:last-child {
+      border-top: 0;
+      border-left: $divider-size solid $divider-color;
+    }
+  }
+}

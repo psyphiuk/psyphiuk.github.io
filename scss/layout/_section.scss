@@ -1,0 +1,14 @@
+@use "../theme" as *;
+
+article > section + section {
+  header {
+  margin-top: $padding;
+  border-top: 2px solid $divider-color;
+  padding-top: $padding * $golden-ratio-bigger;
+  }
+}
+
+section > main {
+  column-width: $max-text-column-width;
+  column-gap: $padding;
+}

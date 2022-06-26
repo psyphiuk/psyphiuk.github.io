@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psy Phi Developer Personal Website - Progress</title>
+    <meta name="author" content="Simon Filtness" />
+    <meta name="description" content="Experimental Website - Progress Page" />
+    <meta
+      name="keyword"
+      content="simon filtness, experimental website, fullstack, react, html, scss"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Gentium+Plus&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <a id="skiptomaincontent" href="#maincontent">Skip to main content</a>
+    <header>
+      <div class="hero-image sunflower">
+        <div class="hero-text">
+          <h1>Website Progress</h1>
+        </div>
+      </div>
+    </header>
+    <main id="top">
+      <aside>
+        <div class="sticky-top">
+          <h3 class="heading-accent">Sections</h3>
+          <nav>
+            <ul>
+              <li><a href="#current">Current Work</a></li>
+              <li><a href="#todo">Todo</a></li>
+              <li><a href="#wins">Quick Wins</a></li>
+              <li><a href="#gotchas">Gotchas</a></li>
+              <li>
+                <a href="#accessibility">Accessibility</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <article id="maincontent">
+        <section id="current">
+          <header>
+            <h2 class="heading-accent">Current Work</h2>
+          </header>
+          <main>
+            <p>
+              Main thing to do initially is to add content to this and other
+              pages so that there is something visible to style on each page.
+            </p>
+            <p>
+              While I add the content I am also looking into do general layout
+              styling for this page. The aim here is that it should be
+              immediately reusable on other pages without modification.
+            </p>
+            <p>
+              I am also exploring what the best way to structure that scss files
+              and folders.
+            </p>
+            <p>
+              Because I am using Phi, also known as the golden ratio, as part of
+              my developer name, I want to try to incorporate the ratio in as
+              many different places as possible. Today I have focused mainly on
+              padding and panel proportions.
+            </p>
+          </main>
+        </section>
+        <section id="todo">
+          <header>
+            <h2 class="heading-accent">Todo</h2>
+          </header>
+          <main>
+            <p>
+              This section will contain a detailed list of the work I am
+              planning to do on this site.
+            </p>
+            <ul role="list">
+              <li>
+                I have not been very good at stopping reused css. I will start
+                to convert this to functions, utility classes and mixins.
+              </li>
+              <li>
+                Add a back to top button.
+              </li>
+              <li>
+                Explore added some reusable React components for things like the
+                nav bar
+              </li>
+            </ul>
+            <p><strong>Wow!</strong> There is not a lot in this section.</p>
+          </main>
+        </section>
+        <section>
+          <header>
+            <h2 class="heading-accent">Quick Wins</h2>
+          </header>
+          <main>
+            <p>
+              This section includes details of some of the quick wins I had
+              while making this site.
+            </p>
+            <ul role="list">
+              <li>
+                The main structure for the scss files has been easier than I
+                expected to settle on. I have taken inspiration from
+                <a
+                  role="link"
+                  href="https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/7-1-sass-architecture"
+                  >7-1 Sass Architecture</a
+                >
+                but used helper instead of abstracts and don't have a vendors
+                folder as I don't intend to use any 3rd party packages
+              </li>
+              <li>
+                Added some styling for code snippets using a monospace google
+                font.
+              </li>
+              <li>
+                I have added a simple, at the moment, colour theme using a
+                primary colour picked from one of the images I have downloaded
+                from unsplashed and the sass:color built-in package.
+              </li>
+            </ul>
+          </main>
+        </section>
+        <section id="gotchas">
+          <header>
+            <h2 class="heading-accent">Gotchas</h2>
+          </header>
+          <main>
+            <p>
+              This section includes things that have not gone how I expected.
+            </p>
+            <ul role="list">
+              <li>
+                I am using a two column <code>aside</code> and
+                <code>article</code> structure for this page and had intended to
+                use <code>has</code> to determine if an <code>aside</code> is
+                present and where it is and then style appropriately. But it
+                didn't work on my chrome browser and when I checked is not well
+                supported yet. I have used a media query to do this for now but
+                at some point need to explore other ways to do it.
+                <blockquote>
+                  I have settled on a simple <code>display: grid;</code> for
+                  this atm.
+                </blockquote>
+              </li>
+              <li>
+                I wanted to improve readability by limiting the width of a
+                paragraph to 60ch so that it flows into 2 columns on larger
+                screens. This didn't happen in the nice clear way I was
+                expecting. Looking at the example on
+                <a
+                  role="link"
+                  href="https://www.w3schools.com/cssref/css3_pr_column-width.asp"
+                  target="."
+                  >w3 schools</a
+                >
+                the <code>column-width</code> is added to a <code>div</code> and
+                the text just included directly without a <code>p</code> tag. I
+                would like to format it into paragraphs so will need to come up
+                with a solution to this.
+                <blockquote>
+                  <em>Extra Gotcha:</em> Is there are other tags too. This
+                  should apply to list items and the blockquotes.
+                </blockquote>
+                <blockquote>
+                  <em>Breakthrough:</em> Not sure what I had done but it is
+                  working the way I wanted it to now. It also helps that each
+                  section has more text now.
+                </blockquote>
+              </li>
+              <li>
+                Sticky on the aside, add top with a padding variable and the
+                section list stays on the screen. <br />
+                <blockquote>
+                  <em>Interesting point:</em> The sticky doesn't work on mobile
+                  view. It took a while to understand why and how to fix it.
+                </blockquote>
+              </li>
+            </ul>
+          </main>
+        </section>
+        <section id="accessibility">
+          <header>
+            <h2 class="heading-accent">Accessibility</h2>
+          </header>
+          <main>
+            <p>
+              This section includes details on what I have added accessibility
+              wise on this site.
+            </p>
+            <ul role="list">
+              <li>Skip to main content for screen readers</li>
+            </ul>
+          </main>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="hero-image shell">
+        <div class="hero-text">
+          <h4>Copyright &copy; 2022 Simon Filtness</h4>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -6,3 +6,12 @@ html, body {
   height: 100vh;
   margin: 0;
 }
+
+ul:not([role="list"]) {
+  list-style: none;
+  padding: 0;
+}
+
+a:not([role="link"]) {
+  text-decoration: none;
+}

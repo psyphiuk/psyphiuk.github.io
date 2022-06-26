@@ -5,6 +5,55 @@
  *  darken or lighten a background image
  *
  */
+/*
+ *  base all colours on the primary
+ */
+/*
+ *  font colours
+ */
+/*
+ *  Colours for specific components
+ */
+.bg-primary {
+  background-color: #e2a030;
+}
+
+html, body {
+  color: #090909;
+  background-color: #fefaf5;
+}
+
+code {
+  color: #555;
+}
+
+html, body {
+  font-family: "Gentium Plus", serif;
+}
+
+a, li, p {
+  font-family: "Open Sans", sans-serif;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+.heading-accent {
+  width: max-content;
+  border-bottom: 2px solid #b6cdf5;
+}
+
+ul[role=list] li + li {
+  padding-top: 1rem;
+}
+
+blockquote {
+  border-left: 8px solid #b6cdf5;
+  margin: 1rem 0;
+  padding: 1rem 40px 1.618rem;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -14,21 +63,177 @@ html, body {
   margin: 0;
 }
 
-html, body {
-  font-family: "Gentium Plus", serif;
+ul:not([role=list]) {
+  list-style: none;
+  padding: 0;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
+a:not([role=link]) {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.half-screen {
+  height: 50vh;
+}
+
+#skiptomaincontent {
+  position: absolute;
+}
+#skiptomaincontent:focus, #skiptomaincontent:active {
+  position: initial;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #c0bdb8;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 2rem;
+}
+
+.golden-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.618fr 1fr;
+}
+.golden-grid > div {
+  background-color: #e2a030;
+  flex-grow: 1;
+}
+.golden-grid :nth-child(2) {
+  background-color: #e8b55d;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: grid;
+  grid-auto-rows: auto 1fr auto;
+}
+
+body > main {
+  display: grid;
+  padding-block: 2rem;
+}
+@media (min-width: 40rem) {
+  body > main {
+    grid-template-columns: 0.382fr 0.618fr;
+  }
+}
+
+header nav {
+  background-color: #f5deb6;
+  min-height: 2rem;
+}
+
+aside nav {
+  text-align: center;
+}
+aside nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (min-width: 40rem) {
+  aside nav ul {
+    display: block;
+  }
+  aside nav ul li + li {
+    padding-top: 1rem;
+  }
+}
+
+nav a, nav a:hover, nav a:focus, nav a:active {
+  text-decoration: underline;
+  color: inherit;
+}
+
+main > aside {
+  padding-inline: 2rem;
+  padding-block-end: 2rem;
+  display: inline-grid;
+  position: sticky;
+  top: 0;
+  background-color: #fefaf5;
+}
+main > aside div {
+  display: inline-grid;
+  justify-items: center;
+}
+main > aside:first-child {
+  border-bottom: 2px solid #b6cdf5;
+}
+main > aside:last-child {
+  border-top: 2px solid #b6cdf5;
+}
+@media (min-width: 40rem) {
+  main > aside {
+    display: block;
+  }
+  main > aside div {
+    display: inline-grid;
+    justify-items: end;
+  }
+  main > aside:first-child {
+    border-bottom: 0;
+    border-right: 2px solid #b6cdf5;
+    text-align: right;
+    padding-right: 4rem;
+    padding-left: 6.472rem;
+  }
+  main > aside:last-child {
+    border-top: 0;
+    border-left: 2px solid #b6cdf5;
+  }
+}
+
+main > article {
+  padding-inline: 2rem;
+}
+@media (min-width: 40rem) {
+  main > article:first-child {
+    padding-right: 4rem;
+    padding-left: 6.472rem;
+  }
+  main > article:last-child {
+    padding-left: 4rem;
+    padding-right: 6.472rem;
+  }
+}
+
+article > section + section header {
+  margin-top: 2rem;
+  border-top: 2px solid #b6cdf5;
+  padding-top: 3.236rem;
+}
+
+section > main {
+  column-width: 60ch;
+  column-gap: 2rem;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/golden-shell.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.hero-image.shell {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/golden-shell.jpg");
+}
+.hero-image.sunflower {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/sunflower.jpg");
 }
 .hero-image .hero-text {
   height: 100%;
@@ -37,3 +242,5 @@ p {
   text-align: center;
   color: #e2a030;
 }
+
+/*# sourceMappingURL=main.css.map */

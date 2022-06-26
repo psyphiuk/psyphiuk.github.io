@@ -7,7 +7,7 @@
   "author": "PsyPhi <psyphiuk@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "sass": "sass -w --update --no-source-map scss:styles"
+    "sass": "sass -w --update scss:styles"
   },
   "devDependencies": {
     "prettier": "^2.7.1",

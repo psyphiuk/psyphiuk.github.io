@@ -1,14 +1,21 @@
+@use "../theme" as *;
 
+@mixin golden-grid {
+  display: grid;
+  @include on-desktop {
+    grid-template-columns: $golden-ratio-left +fr $golden-ratio + fr;
+  }
+}
 
 .golden-grid {
   height: 100vh;
   display: grid;
-  grid-template-columns: helper.$golden-ratio + fr 1fr;
+  grid-template-columns: $golden-ratio + fr 1fr;
   > div {
-    background-color: #e2a030;
+    background-color: $primary;
     flex-grow: 1;
   }
   :nth-child(2) {
-    background-color: adjust-color($color: #e3a030, $lightness: 10%);
+    background-color: adjust-color($primary, $lightness: 10%);
   }
 }

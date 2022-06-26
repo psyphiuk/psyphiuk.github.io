@@ -1,0 +1,44 @@
+@use "sass:color";
+
+/*
+ *  base all colours on the primary
+ */
+$primary: #e2a030;
+$primary-light: adjust-color($primary, $lightness: 30%);
+$primary-dark: adjust-color($primary, $lightness: -30%);
+
+$complement: complement($primary);
+
+$accent: adjust-color($complement, $lightness: 30%);
+
+$neutral: adjust-color($primary, $saturation: -70%, $lightness: 20%);
+$neutral-light: adjust-color($primary, $saturation: -70%, $lightness: 40%);
+$neutral-dark: adjust-color($primary, $saturation: -70%);
+
+$background: adjust-color($primary, $lightness: 44%);
+
+/*
+ *  font colours
+ */
+
+$font-primary: #090909;
+$font-code: #555;
+
+/*
+ *  Colours for specific components
+ */
+
+$divider-color: adjust-color($complement, $lightness: 30%);
+
+.bg-primary {
+  background-color: $primary;
+}
+
+html, body {
+  color: $font-primary;
+  background-color: $background;
+}
+
+code {
+  color: $font-code;
+}

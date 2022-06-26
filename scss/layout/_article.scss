@@ -1,0 +1,17 @@
+@use "../theme" as *;
+@use "../helpers" as *;
+
+main > article {
+  padding-inline: $padding;
+  @include on-desktop {
+    &:first-child {
+      padding-right: $inner-padding;
+      padding-left: $outer-padding;
+    }
+
+    &:last-child {
+      padding-left: $inner-padding;
+      padding-right: $outer-padding;
+    }
+  }
+}

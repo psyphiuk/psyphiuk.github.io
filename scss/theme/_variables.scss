@@ -1,0 +1,21 @@
+// random stuff
+$golden-ratio: 0.618;
+$golden-ratio-bigger: 1 + $golden-ratio;
+$golden-ratio-left: 1 - $golden-ratio;
+
+// breakpoints
+$breakpoint-desktop: 40rem;
+
+// content sizes
+$max-text-column-width: 60ch;
+$sidebar-width: 10rem;
+
+// general padding
+$padding: 2rem;
+$inner-padding: 4rem;
+$outer-padding: $inner-padding * $golden-ratio-bigger;
+$nav-item-padding: 1rem;
+$list-item-padding: 1rem;
+
+// dividers
+$divider-size: 2px;

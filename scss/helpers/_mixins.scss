@@ -1,4 +1,11 @@
-@use "../helper" as *;
+@use "../theme" as *;
+@use "./functions" as *;
+
+@mixin on-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content
+  }
+}
 
 @mixin faded-background-image($base: 0, $alpha: 0.3, $image-url ) {
   background-image: solid-gradient($base, $alpha), url($image-url);
