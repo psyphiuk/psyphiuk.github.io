@@ -30,6 +30,6 @@ ul[role="list"] li + li {
 
 blockquote {
   border-left: 8px solid $accent;
-  margin: $padding / 2 0;
-  padding: $padding / 2 40px $padding / 2 * $golden-ratio-bigger;
+  margin: calc($padding / 2) 0;
+  padding: calc($padding / 2) 40px calc($padding / 2 * $golden-ratio-bigger);
 }

@@ -1,0 +1,57 @@
+@use "../theme" as *;
+
+body {
+  scroll-behavior: smooth;
+}
+
+body > header {
+  > site-nav {
+    height: 100%;
+    background-color: $primary-light;
+    padding: $padding;
+    font-size: 150%;
+  }
+}
+
+nav {
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+body > main {
+  > :not(header) {
+    padding-block: $padding;
+  }
+}
+
+body > main > header {
+    padding-inline: $padding;
+}
+
+main > article:not(.no-padding) {
+  margin-block: $padding;
+}
+
+article:not(.no-padding) > section {
+  margin-block: $padding;
+  padding: $padding;
+}
+
+main > header {
+  position: sticky;
+  top: 0;
+  font-size: 125%;
+}
+
+section > header {
+  font-size: 150%;
+  padding-bottom: $padding;
+}
+
+body > footer {
+}

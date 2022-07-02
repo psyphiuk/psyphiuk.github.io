@@ -1,0 +1,31 @@
+
+#home {
+  .hero-image {
+    
+  }
+  .hero-text {
+    h1, p, div {
+      opacity: 0;
+      animation: fade-in 5s ease-in forwards;
+    }
+
+    p {
+      animation-delay: 1s;
+    }
+
+    div {
+      animation-delay: 2s;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% { 
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

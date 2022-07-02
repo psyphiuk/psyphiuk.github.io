@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psy Phi Developer Personal Website</title>
+    <title>Grid & Flexbox Templates/title>
     <meta name="author" content="Simon Filtness" />
     <meta name="description" content="Experimental Website" />
     <meta
@@ -29,27 +29,54 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script src="components/site-nav.js" type="text/javascript" defer></script>
   </head>
-  <body id="home">
+  <body>
     <header class="grid">
-      <div class="grid-stack full-screen hero-image field  background-image-cover centered">
-        <div class="hero-text primary text-center center up-20">
+      <div class="grid-stack hero-image shell centered background-image-cover">
+        <div class="hero-text primary">
           <h1>Hi, I'm Simon</h1>
           <p>I'm a fullstack developer</p>
-          <div class="scroll-down-indicator"></div>
         </div>
       </div>
       <site-nav></site-nav>
     </header>
-    <article class="no-padding" >
-      <section>
-        <header>
-          <div class="grid-stack half-screen hero-image grass background-image-cover">
-            <div class="hero-text primary text-center center">
-              <h2>Website</h2>
-            </div>
+    <article>
+        <main class="grid-gap">
+          <section>
+            <header>
+              <h2>Grid based Templates</h2>
+            </header>
+          <div class="gap grid-even-columns">
+            <div class="card"></div>
           </div>
-        </header>
-      </section>
+          <div class="gap grid-even-columns">
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+          <div class="gap grid-even-columns">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+        <section>
+          <header>
+            <h2>Flexbox based Templates</h2>
+          </header>
+          <div class="flex gap">
+            <div class="card"></div>
+          </div>
+          <div class="flex gap">
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+          <div class="flex gap">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+        </main>
+      
     </article>
   </body>
 </html>

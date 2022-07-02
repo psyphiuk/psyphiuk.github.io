@@ -19,36 +19,33 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script src="components/site-nav.js" type="text/javascript" defer></script>
   </head>
-  <body>
+  <body class="grid">
     <a id="skiptomaincontent" href="#maincontent">Skip to main content</a>
-    <header>
-      <div class="hero-image sunflower">
-        <div class="hero-text">
-          <h1>Website Progress</h1>
-        </div>
+    <header class="grid">
+      <div class="grid-stack hero-image sunflower centered">
+        <h1 class="hero-text primary"><a href="index.html">Website Progress</a></h1>
       </div>
+      <site-nav></site-nav>
     </header>
-    <main id="top">
-      <aside>
-        <div class="sticky-top">
-          <h3 class="heading-accent">Sections</h3>
-          <nav>
-            <ul>
-              <li><a href="#current">Current Work</a></li>
-              <li><a href="#todo">Todo</a></li>
-              <li><a href="#wins">Quick Wins</a></li>
-              <li><a href="#gotchas">Gotchas</a></li>
-              <li>
-                <a href="#accessibility">Accessibility</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </aside>
-      <article id="maincontent">
+    <main id="top" class="grid">
+      <header class="bg-neutral-light">
+        <nav>
+          <ul class="flex-columns gap text-center">
+            <li><a href="#current">Current Work</a></li>
+            <li><a href="#todo">Todo</a></li>
+            <li><a href="#wins">Quick Wins</a></li>
+            <li><a href="#gotchas">Gotchas</a></li>
+            <li>
+              <a href="#accessibility">Accessibility</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <article class="max-content center">
         <section id="current">
-          <header>
+          <header id="maincontent" >
             <h2 class="heading-accent">Current Work</h2>
           </header>
           <main>
@@ -87,9 +84,7 @@
                 I have not been very good at stopping reused css. I will start
                 to convert this to functions, utility classes and mixins.
               </li>
-              <li>
-                Add a back to top button.
-              </li>
+              <li>Add a back to top button.</li>
               <li>
                 Explore added some reusable React components for things like the
                 nav bar
@@ -205,11 +200,11 @@
         </section>
       </article>
     </main>
-    <footer>
+    <footer class="grid">
       <div class="hero-image shell">
-        <div class="hero-text">
-          <h4>Copyright &copy; 2022 Simon Filtness</h4>
-        </div>
+        <h5 class="hero-text text-center primary">
+          Copyright &copy; 2022 Simon Filtness
+        </h5>
       </div>
     </footer>
   </body>

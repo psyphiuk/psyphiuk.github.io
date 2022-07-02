@@ -4,7 +4,7 @@
  *  base all colours on the primary
  */
 $primary: #e2a030;
-$primary-light: adjust-color($primary, $lightness: 30%);
+$primary-light: adjust-color($primary, $lightness: 40%);
 $primary-dark: adjust-color($primary, $lightness: -30%);
 
 $complement: complement($primary);
@@ -30,8 +30,16 @@ $font-code: #555;
 
 $divider-color: adjust-color($complement, $lightness: 30%);
 
+.primary {
+  color: $primary;
+}
+
 .bg-primary {
   background-color: $primary;
+}
+
+.bg-neutral-light {
+  background-color: $neutral-light;
 }
 
 html, body {

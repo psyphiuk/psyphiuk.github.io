@@ -7,8 +7,12 @@ $golden-ratio-left: 1 - $golden-ratio;
 $breakpoint-desktop: 40rem;
 
 // content sizes
+$max-content-width: 40rem;
 $max-text-column-width: 60ch;
 $sidebar-width: 10rem;
+$grid-min-size: 10rem;
+$flex-min-size: 10rem;
+$flex-max-size: 20rem;
 
 // general padding
 $padding: 2rem;

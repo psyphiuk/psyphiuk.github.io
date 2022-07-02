@@ -8,14 +8,22 @@
   &.sunflower {
     @include faded-background-image(255, 0.7, "../images/sunflower.jpg");
   }
-  @include background-image-cover;
+  &.field {
+    @include faded-background-image(255, 0.7, "../images/field.jpg");
+  }
+  &.buildings {
+    @include faded-background-image(255, 0.7, "../images/buildings.jpg");
+  }
+  &.grass {
+    @include faded-background-image(255, 0.7, "../images/grass.jpg");
+  }
+  &.leaves {
+    @include faded-background-image(255, 0.7, "../images/leaves.jpg");
+  }
   position: relative;
 
   .hero-text {
-    height: 100%;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    color: $primary;
+    padding-inline: $padding;
+    font-size: 200%;
   }
 }

@@ -1,5 +1,27 @@
+@use "../theme" as *;
+
 .text-center {
   text-align: center;
+}
+
+.v-center {
+  margin-block: auto;
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.vh-center {
+  margin: auto;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+.full-height {
+  height: 100%;
 }
 
 .full-screen {
@@ -8,4 +30,25 @@
 
 .half-screen {
   height: 50vh;
+}
+
+.up-20 {
+  transform: translateY(-20%);
+}
+
+.max-content {
+  max-width: $max-content-width;
+}
+
+.background-image-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.show-on-hover {
+  visibility: hidden;
+  :hover {
+    visibility: visible;
+  }
 }
