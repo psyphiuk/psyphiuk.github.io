@@ -59,12 +59,6 @@
   padding: $padding;
   background-color: $neutral-light;
   border-radius: 8px;
-  
-  &::after {
-    content: '#';
-    width: 100%;
-    text-align: center;
-  }
 }
 
 @mixin golden-grid {

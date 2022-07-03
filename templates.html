@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid & Flexbox Templates/title>
+    <title>Grid & Flexbox Templates</title>
     <meta name="author" content="Simon Filtness" />
     <meta name="description" content="Experimental Website" />
     <meta
@@ -13,14 +13,6 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=EB+Garamond&family=Gentium+Plus&display=swap"
-      rel="stylesheet"
-    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Gentium+Plus&display=swap"
       rel="stylesheet"
@@ -29,54 +21,53 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script src="components/site-nav.js" type="text/javascript" defer></script>
   </head>
-  <body>
+  <body class="grid">
     <header class="grid">
       <div class="grid-stack hero-image shell centered background-image-cover">
         <div class="hero-text primary">
-          <h1>Hi, I'm Simon</h1>
-          <p>I'm a fullstack developer</p>
+          <h1>Template Experiments / Ideas</h1>
         </div>
       </div>
       <site-nav></site-nav>
     </header>
-    <article>
-        <main class="grid-gap">
-          <section>
-            <header>
-              <h2>Grid based Templates</h2>
-            </header>
+    <main>
+      <article class="grid-gap">
+        <section>
+          <header>
+            <h3 class="heading-accent">Grid based Templates</h3>
+          </header>
+          <h4>Dynamic even columns</h4>
           <div class="gap grid-even-columns">
-            <div class="card"></div>
+            <div class="card">1-column</div>
           </div>
           <div class="gap grid-even-columns">
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card">2-columns</div>
+            <div class="card">2-columns</div>
           </div>
           <div class="gap grid-even-columns">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card">3-columns</div>
+            <div class="card">3-columns</div>
+            <div class="card">3-columns</div>
           </div>
         </section>
         <section>
           <header>
-            <h2>Flexbox based Templates</h2>
+            <h3 class="heading-accent">Flexbox based Templates</h3>
           </header>
-          <div class="flex gap">
-            <div class="card"></div>
+          <div class="flex-gap">
+            <div class="card">1-column</div>
           </div>
-          <div class="flex gap">
-            <div class="card"></div>
-            <div class="card"></div>
+          <div class="flex-gap">
+            <div class="card">2-columns</div>
+            <div class="card">2-columns</div>
           </div>
-          <div class="flex gap">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+          <div class="flex-gap">
+            <div class="card">3-columns</div>
+            <div class="card">3-columns</div>
+            <div class="card">3-columns</div>
           </div>
         </section>
-        </main>
-      
-    </article>
+      </article>
+    </main>
   </body>
 </html>

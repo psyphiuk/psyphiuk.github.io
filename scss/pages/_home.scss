@@ -4,28 +4,41 @@
     
   }
   .hero-text {
-    h1, p, div {
+    h1, p {
       opacity: 0;
-      animation: fade-in 5s ease-in forwards;
+      animation: 
+        fade-in 3s ease-out forwards,
+        drop-in 5s ease-out forwards;
     }
 
     p {
-      animation-delay: 1s;
+      animation-delay: 2s;
     }
 
     div {
-      animation-delay: 2s;
+      opacity: 0;
+      animation: 
+        fade-in 3s ease-out forwards;
+      animation-delay: 5s;
     }
+  }
+}
+
+@keyframes drop-in {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
 @keyframes fade-in {
   0% { 
     opacity: 0;
-    transform: translateY(-100vh);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+   
   }
 }
