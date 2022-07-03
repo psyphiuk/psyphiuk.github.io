@@ -113,6 +113,10 @@ a:not([role=link]) {
   height: 50vh;
 }
 
+.title-max {
+  max-width: 18ch;
+}
+
 .up-20 {
   transform: translateY(-20%);
 }
