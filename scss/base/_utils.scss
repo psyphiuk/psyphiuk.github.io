@@ -40,6 +40,18 @@
   transform: translateY(-20%);
 }
 
+.padding {
+  padding: $padding;
+}
+
+.block-padding {
+  padding-block: $padding;
+}
+
+.inline-padding {
+  padding-inline: $padding;
+}
+
 .max-content {
   max-width: $max-content-width;
 }

@@ -121,6 +121,18 @@ a:not([role=link]) {
   transform: translateY(-20%);
 }
 
+.padding {
+  padding: 2rem;
+}
+
+.block-padding {
+  padding-block: 2rem;
+}
+
+.inline-padding {
+  padding-inline: 2rem;
+}
+
 .max-content {
   max-width: 40rem;
 }
@@ -163,7 +175,7 @@ a:not([role=link]) {
   display: grid;
 }
 
-.between, .grid-between {
+.between, .grid-between, .flex-between {
   justify-content: space-between;
 }
 
@@ -203,7 +215,7 @@ a:not([role=link]) {
 }
 
 .card {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f0efee;
   border-radius: 8px;
 }
@@ -266,6 +278,20 @@ main > header {
 section > header {
   font-size: 150%;
   padding-bottom: 2rem;
+}
+
+section > details {
+  margin-block: 2rem;
+}
+section > details > summary {
+  padding: 1rem;
+  background-color: #f0efee;
+  font-size: 1.5rem;
+}
+
+details > details > summary {
+  padding: 1rem;
+  font-size: 1.25rem;
 }
 
 .hero-image {

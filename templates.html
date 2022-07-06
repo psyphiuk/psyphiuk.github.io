@@ -32,90 +32,226 @@
     </header>
     <main>
       <article class="grid-gap">
-        <header class="max-content center">
-          <p>This page contains a number of theme based templates, for examples, a set of templates on <code>display: grid;</code>.</p>
-        </header>
         <section>
-          <header>
-            <h3 class="heading-accent">Grid based Templates</h3>
-          </header>
-          <h4>Responsive even columns</h4>
-          <div class="gap grid-even-columns">
-            <div class="card">1-column</div>
-          </div>
-          <div class="gap grid-even-columns">
-            <div class="card">2-columns</div>
-            <div class="card">2-columns</div>
-          </div>
-          <div class="gap grid-even-columns">
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-          </div>
-          <div class="gap grid-even-columns">
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-          </div>
-          <div class="gap grid-even-columns">
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-          </div>
-          <h4>Stack</h4>
-          <div class="grid-stack">
-            <div class="card">1-item-stack</div>
-          </div>
-          <div class="grid-stack">
-            <div class="card">2-item-stack</div>
-            <div class="card">2-item-stack</div>
-          </div>
-          <h4>Dynamic auto columns</h4>
-          <div class="gap grid-auto-columns">
-            <div class="card">1-column</div>
-          </div>
-          <div class="gap grid-auto-columns">
-            <div class="card">2-columns</div>
-            <div class="card">2-columns</div>
-          </div>
-          <div class="gap grid-auto-columns">
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-          </div>
-          <div class="gap grid-auto-columns">
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-            <div class="card">4-columns</div>
-          </div>
-          <div class="gap grid-auto-columns">
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-            <div class="card">5-columns</div>
-          </div>
-        </section>
-        <section>
-          <header>
-            <h3 class="heading-accent">Flexbox based Templates</h3>
-          </header>
-          <div class="flex-gap">
-            <div class="card">1-column</div>
-          </div>
-          <div class="flex-gap">
-            <div class="card">2-columns</div>
-            <div class="card">2-columns</div>
-          </div>
-          <div class="flex-gap">
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-            <div class="card">3-columns</div>
-          </div>
+          <h2>Layout Ideas</h2>
+          <p>
+            This section contains a number of theme based layout templates based
+            on <code>display: flex;</code> or <code>display: grid;</code>, all
+            exploring the idea of using minimal css classes and keeping the css
+            <abbr title="Don't Repeat YourselfF">DRY</abbr>. For most of this
+            page each section, example and elements uses these template class to
+            create separation ( <code>gap</code>, <code>flex-gap</code> or
+            <code>grid-gap</code>).
+          </p>
+          <details>
+            <summary>Flexbox based Templates</summary>
+            <p>
+              The following templates show the results of a set of classes that
+              all begin with <code>flex-</code> which automatically includes an
+              enabler class that adds the <code>display: flex;</code> to the
+              container and <code>flex: 1 0 [flex-basis calculation];</code>.
+            </p>
+            <details>
+              <summary>Only flex</summary>
+              <div class="grid-gap block-padding">
+                <div class="flex-gap">
+                  <div class="card">1-column</div>
+                </div>
+                <div class="flex-gap">
+                  <div class="card">2-columns</div>
+                  <div class="card">2-columns</div>
+                </div>
+                <div class="flex-gap">
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                </div>
+                <div class="flex-gap">
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                </div>
+                <div class="flex-gap">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Flex between</summary>
+              <p>
+                Adding flex-gap to ensure the children have a minimum gap
+                between them.
+              </p>
+              <div class="grid-gap block-padding">
+                <div class="flex-gap flex-between">
+                  <div class="card">1-column</div>
+                </div>
+                <div class="flex-gap flex-between">
+                  <div class="card">2-columns</div>
+                  <div class="card">2-columns</div>
+                </div>
+                <div class="flex-gap flex-between">
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                </div>
+                <div class="flex-gap flex-between">
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                </div>
+                <div class="flex-gap flex-between">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
+                <p>
+                  But with no gap specified each child still has a small gap
+                  between.
+                </p>
+                <div class="flex-between">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Dynamic columns</summary>
+              <p>
+                For this class we enabler class adds
+                <code>display: flex;</code> to the container and we also add
+                <code>flex: 1 0 [flex-basis calculation];</code> to each of the
+                direct children. Note that if a row wraps that the orphan child
+                that is pushed to the next row grows to the full width.
+              </p>
+              <div class="grid-gap block-padding">
+                <div class="flex-gap flex-columns">
+                  <div class="card">1-column</div>
+                </div>
+                <div class="flex-gap flex-columns">
+                  <div class="card">2-columns</div>
+                  <div class="card">2-columns</div>
+                </div>
+                <div class="flex-gap flex-columns">
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                </div>
+                <div class="flex-gap flex-columns">
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                </div>
+                <div class="flex-gap flex-columns">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
+              </div>
+            </details>
+          </details>
+          <details>
+            <summary>Grid based Templates</summary>
+
+            <p>
+              The following templates show the results of a set of classes that
+              all begin with <code>grid-</code> which automatically includes an
+              enabler class that adds the <code>display: grid;</code> to the
+              container. So for the even columns example below all that is
+              needed is to add the class grid-even-columns to use the style.
+            </p>
+            <details>
+              <summary>Responsive even columns</summary>
+
+              <p>
+                <em>Note:</em> You control the number of columns simply by
+                including child elements, no other styling is required. With
+                this style if there is not enough space for
+              </p>
+              <div class="grid-gap">
+                <div class="gap grid-even-columns">
+                  <div class="card">1-column</div>
+                </div>
+                <div class="gap grid-even-columns">
+                  <div class="card">2-columns</div>
+                  <div class="card">2-columns</div>
+                </div>
+                <div class="gap grid-even-columns">
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                </div>
+                <div class="gap grid-even-columns">
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                </div>
+                <div class="gap grid-even-columns">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Dynamic auto columns</summary>
+              <div class="gap grid-auto-columns">
+                <div class="card">1-column</div>
+              </div>
+              <div class="gap grid-auto-columns">
+                <div class="card">2-columns</div>
+                <div class="card">2-columns</div>
+              </div>
+              <div class="gap grid-auto-columns">
+                <div class="card">3-columns</div>
+                <div class="card">3-columns</div>
+                <div class="card">3-columns</div>
+              </div>
+              <div class="gap grid-auto-columns">
+                <div class="card">4-columns</div>
+                <div class="card">4-columns</div>
+                <div class="card">4-columns</div>
+                <div class="card">4-columns</div>
+              </div>
+              <div class="gap grid-auto-columns">
+                <div class="card">5-columns</div>
+                <div class="card">5-columns</div>
+                <div class="card">5-columns</div>
+                <div class="card">5-columns</div>
+                <div class="card">5-columns</div>
+              </div>
+            </details>
+            <details>
+              <summary>Stack</summary>
+              <div class="grid-stack">
+                <div class="card">1-item-stack</div>
+              </div>
+              <div class="grid-stack">
+                <div class="card">2-item-stack</div>
+                <div class="card">2-item-stack</div>
+              </div>
+            </details>
+          </details>
+          <details>
+            <summary>Combinations</summary>
+          </details>
         </section>
       </article>
     </main>

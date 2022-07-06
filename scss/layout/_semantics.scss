@@ -53,5 +53,21 @@ section > header {
   padding-bottom: $padding;
 }
 
+section > details {
+  margin-block: $padding;
+  > summary {
+    padding: $padding / 2;
+    background-color: $neutral-light;
+    font-size: 1.5rem;
+  }
+}
+
+details > details {
+  > summary {
+    padding: $padding / 2;
+    font-size: 1.25rem;
+  }
+}
+
 body > footer {
 }
