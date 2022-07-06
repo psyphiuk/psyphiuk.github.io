@@ -14,5 +14,6 @@ ul:not([role="list"]) {
 }
 
 a:not([role="link"]) {
+  color: inherit;
   text-decoration: none;
 }

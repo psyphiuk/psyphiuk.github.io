@@ -23,7 +23,7 @@
   </head>
   <body class="grid">
     <header class="grid">
-      <div class="grid-stack hero-image shell centered background-image-cover">
+      <div class="grid-stack hero-image shell ji-center background-image-cover">
         <div class="hero-text primary">
           <h1 class="title-max text-center">Template Experiments / Ideas</h1>
         </div>
@@ -31,11 +31,11 @@
       <site-nav></site-nav>
     </header>
     <main>
-      <article class="grid-gap">
-        <section>
+      <article class="grid-gap jc-center">
+        <section class="max-content">
           <h2>Layout Ideas</h2>
           <p>
-            This section contains a number of theme based layout templates based
+            This section contains a number of themed layout templates based
             on <code>display: flex;</code> or <code>display: grid;</code>, all
             exploring the idea of using minimal css classes and keeping the css
             <abbr title="Don't Repeat YourselfF">DRY</abbr>. For most of this
@@ -49,7 +49,7 @@
               The following templates show the results of a set of classes that
               all begin with <code>flex-</code> which automatically includes an
               enabler class that adds the <code>display: flex;</code> to the
-              container and <code>flex: 1 0 [flex-basis calculation];</code>.
+              container.
             </p>
             <details>
               <summary>Only flex</summary>
@@ -88,25 +88,25 @@
                 between them.
               </p>
               <div class="grid-gap block-padding">
-                <div class="flex-gap flex-between">
+                <div class="flex-gap jc-flex-between">
                   <div class="card">1-column</div>
                 </div>
-                <div class="flex-gap flex-between">
+                <div class="flex-gap jc-flex-between">
                   <div class="card">2-columns</div>
                   <div class="card">2-columns</div>
                 </div>
-                <div class="flex-gap flex-between">
+                <div class="flex-gap jc-flex-between">
                   <div class="card">3-columns</div>
                   <div class="card">3-columns</div>
                   <div class="card">3-columns</div>
                 </div>
-                <div class="flex-gap flex-between">
+                <div class="flex-gap jc-flex-between">
                   <div class="card">4-columns</div>
                   <div class="card">4-columns</div>
                   <div class="card">4-columns</div>
                   <div class="card">4-columns</div>
                 </div>
-                <div class="flex-gap flex-between">
+                <div class="flex-gap jc-flex-between">
                   <div class="card">5-columns</div>
                   <div class="card">5-columns</div>
                   <div class="card">5-columns</div>
@@ -117,7 +117,7 @@
                   But with no gap specified each child still has a small gap
                   between.
                 </p>
-                <div class="flex-between">
+                <div class="jc-flex-between">
                   <div class="card">5-columns</div>
                   <div class="card">5-columns</div>
                   <div class="card">5-columns</div>
@@ -129,7 +129,7 @@
             <details>
               <summary>Dynamic columns</summary>
               <p>
-                For this class we enabler class adds
+                For this class the enabler class adds
                 <code>display: flex;</code> to the container and we also add
                 <code>flex: 1 0 [flex-basis calculation];</code> to each of the
                 direct children. Note that if a row wraps that the orphan child
@@ -180,7 +180,7 @@
               <p>
                 <em>Note:</em> You control the number of columns simply by
                 including child elements, no other styling is required. With
-                this style if there is not enough space for
+                this style if there is not enough space for the columns to fit in then any that don't fit will wrap to the next row.
               </p>
               <div class="grid-gap">
                 <div class="gap grid-even-columns">
@@ -212,40 +212,61 @@
             </details>
             <details>
               <summary>Dynamic auto columns</summary>
-              <div class="gap grid-auto-columns">
-                <div class="card">1-column</div>
-              </div>
-              <div class="gap grid-auto-columns">
-                <div class="card">2-columns</div>
-                <div class="card">2-columns</div>
-              </div>
-              <div class="gap grid-auto-columns">
-                <div class="card">3-columns</div>
-                <div class="card">3-columns</div>
-                <div class="card">3-columns</div>
-              </div>
-              <div class="gap grid-auto-columns">
-                <div class="card">4-columns</div>
-                <div class="card">4-columns</div>
-                <div class="card">4-columns</div>
-                <div class="card">4-columns</div>
-              </div>
-              <div class="gap grid-auto-columns">
-                <div class="card">5-columns</div>
-                <div class="card">5-columns</div>
-                <div class="card">5-columns</div>
-                <div class="card">5-columns</div>
-                <div class="card">5-columns</div>
+              <div class="grid-gap">
+                <div class="gap grid-auto-columns">
+                  <div class="card">1-column</div>
+                </div>
+                <div class="gap grid-auto-columns">
+                  <div class="card">2-columns</div>
+                  <div class="card">2-columns</div>
+                </div>
+                <div class="gap grid-auto-columns">
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                  <div class="card">3-columns</div>
+                </div>
+                <div class="gap grid-auto-columns">
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                  <div class="card">4-columns</div>
+                </div>
+                <div class="gap grid-auto-columns">
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                  <div class="card">5-columns</div>
+                </div>
               </div>
             </details>
             <details>
               <summary>Stack</summary>
-              <div class="grid-stack">
-                <div class="card">1-item-stack</div>
-              </div>
-              <div class="grid-stack">
-                <div class="card">2-item-stack</div>
-                <div class="card">2-item-stack</div>
+              <div class="grid-gap">
+                <p>Note that in the 2-item-stack, each item can be individually places by using <code>place-self</code>. Also on small screens the items may overlap. </p>
+                <div class="grid-stack">
+                  <div class="card">1-item-stack</div>
+                </div>
+                <div class="grid-stack">
+                  <div class="card ps-center-center">2-item-stack</div>
+                  <div class="card ps-end-end">2-item-stack</div>
+                </div>
+                <div class="grid-stack half-screen">
+                  <div class="card ps-start-start">9-item-stack - start-start</div>
+                  <div class="card ps-start-center">9-item-stack - start-center</div>
+                  <div class="card ps-start-end">9-item-stack - start-end</div>
+                  <div class="card ps-center-start">9-item-stack - center-start</div>
+                  <div class="card ps-center-center">9-item-stack - center-center</div>
+                  <div class="card ps-center-end">9-item-stack - center-end</div>
+                  <div class="card ps-end-start">9-item-stack - end-start</div>
+                  <div class="card ps-end-center">9-item-stack - end-center</div>
+                  <div class="card ps-end-end">9-item-stack - end-end</div>
+                </div>
+                <p>Without positioning the two items cover the same area. Gap has not effect on them.</p>
+                <div class="grid-stack gap">
+                  <div class="card">2-item-stack</div>
+                  <div class="card">2-item-stack</div>
+                </div>
               </div>
             </details>
           </details>

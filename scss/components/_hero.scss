@@ -26,4 +26,27 @@
     padding-inline: $padding;
     font-size: 200%;
   }
+
+  /* dark theme */
+  @if ($dark-theme) {
+    &.shell {
+      @include faded-background-image(0, 0.7, "../images/golden-shell.jpg");
+    }
+    &.sunflower {
+      @include faded-background-image(0, 0.7, "../images/sunflower.jpg");
+    }
+    &.field {
+      @include faded-background-image(0, 0.7, "../images/field.jpg");
+    }
+    &.buildings {
+      @include faded-background-image(0, 0.7, "../images/buildings.jpg");
+    }
+    &.grass {
+      @include faded-background-image(0, 0.7, "../images/grass.jpg");
+    }
+    &.leaves {
+      @include faded-background-image(0, 0.7, "../images/leaves.jpg");
+    }
+  }
 }
+

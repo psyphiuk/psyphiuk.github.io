@@ -1,5 +1,7 @@
 @use "sass:color";
 
+$dark-theme: false;
+
 /*
  *  base all colours on the primary
  */
@@ -24,18 +26,46 @@ $background: adjust-color($primary, $lightness: 44%);
 $font-primary: #090909;
 $font-code: #555;
 
+$divider-color: adjust-color($complement, $lightness: 30%);
+
+/*
+ * dark theme
+ */
+@if ($dark-theme) {
+  $primary-light: adjust-color($primary, $lightness: -40%);
+  $accent: adjust-color($complement, $lightness: -30%);
+  $background: adjust-color($primary, $lightness: -44%);
+  $neutral: adjust-color($primary, $saturation: -70%, $lightness: -20%);
+  $neutral-light: adjust-color($primary, $saturation: -70%, $lightness: -40%);
+  $font-primary: #f5f5f5;
+  $font-code: #aaa;
+  $divider-color: adjust-color($complement, $lightness: 70%);
+}
+
 /*
  *  Colours for specific components
  */
 
-$divider-color: adjust-color($complement, $lightness: 30%);
 
-.primary {
-  color: $primary;
+
+$colors: (
+  primary: $primary,
+  secondary: $complement,
+  accent: $accent,
+  neutral: $neutral,
+  text: $font-primary,
+);
+
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
 }
 
-.bg-primary {
-  background-color: $primary;
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
 }
 
 .bg-neutral-light {

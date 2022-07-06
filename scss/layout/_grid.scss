@@ -1,23 +1,152 @@
 @use "../theme" as *;
 
-.gap, .grid-gap, .flex-gap {
-  gap: $padding;
+$justify-content: (
+  start: start, 
+  center: center, 
+  end: end, 
+  between: space-between, 
+  around: space-around, 
+  evenly: space-evenly,
+  stretch: stretch,
+);
+
+@each $name, $value in $justify-content {
+  .jc-#{$name}, .jc-flex-#{$name}, .jc-grid-#{$name} {
+    justify-content: $value;
+  }
+}
+
+$justify-items: (
+  stretch: stretch,
+  start: start,
+  center: center,
+  end: end,
+  baseline: baseline,
+);
+
+@each $name, $value in $justify-items {
+  .ji-#{$name}, .ji-flex-#{$name}, .ji-grid-#{$name} {
+    justify-items: $value;
+  }
+}
+
+$justify-self: (
+  auto: auto,
+  stretch: stretch,
+  start: start,
+  center: center,
+  end: end,
+  baseline: baseline,
+);
+
+@each $name, $value in $justify-self {
+  .js-#{$name}, .js-flex-#{$name}, .js-grid-#{$name} {
+    justify-items: $value;
+  }
+}
+
+@each $name, $value in $justify-self {
+  .cjs-#{$name}, .cjs-flex-#{$name}, .cjs-grid-#{$name} {
+    > * {
+      justify-items: $value;
+    }
+  }
+}
+
+$align-content: (
+  start: start, 
+  center: center, 
+  end: end, 
+  baseline: baseline,
+  between: space-between, 
+  around: space-around, 
+  evenly: space-evenly,
+  stretch: stretch,
+);
+
+@each $name, $value in $align-content {
+  .ac-#{$name}, .ac-flex-#{$name}, .ac-grid-#{$name} {
+    align-content: $value;
+  }
+}
+
+$align-items: (
+  stretch: stretch,
+  start: start,
+  center: center,
+  end: end,
+  baseline: baseline,
+);
+
+@each $name, $value in $align-items {
+  .ai-#{$name}, .ai-flex-#{$name}, .ai-grid-#{$name} {
+    align-items: $value;
+  }
+}
+
+$align-self: (
+  auto: auto,
+  stretch: stretch,
+  start: start,
+  center: center,
+  end: end,
+  baseline: baseline,
+);
+
+@each $name, $value in $align-self {
+  .as-#{$name}, .as-flex-#{$name}, .as-grid-#{$name} {
+    align-items: $value;
+  }
+}
+
+@each $aname, $avalue in $align-content {
+  @each $jname, $jvalue in $justify-content {
+    .pc-#{$aname}-#{$jname},
+    .pc-flex-#{$aname}-#{$jname},
+    .pc-grid-#{$aname}-#{$jname} {
+      place-content: $avalue $jvalue;
+    }
+  }
+}
+
+@each $aname, $avalue in $align-items {
+  @each $jname, $jvalue in $justify-items {
+    .pi-#{$aname}-#{$jname},
+    .pi-flex-#{$aname}-#{$jname},
+    .pi-grid-#{$aname}-#{$jname} {
+      place-items: $avalue $jvalue;
+    }
+  }
+}
+
+@each $aname, $avalue in $align-self {
+  @each $jname, $jvalue in $justify-self {
+    .ps-#{$aname}-#{$jname},
+    .ps-flex-#{$aname}-#{$jname},
+    .ps-grid-#{$aname}-#{$jname} {
+      place-self: $avalue $jvalue;
+    }
+  }
+}
+
+@each $aname, $avalue in $align-self {
+  @each $jname, $jvalue in $justify-self {
+    .cps-#{$aname}-#{$jname},
+    .cps-flex-#{$aname}-#{$jname},
+    .cps-grid-#{$aname}-#{$jname} {
+      > * {
+        place-self: $avalue $jvalue;
+      }
+    }
+  }
 }
 
 [class*="grid"] {
   display: grid;
 }
 
-.between, .grid-between, .flex-between {
-  justify-content: space-between;
-}
-
-.centered, .grid-centered {
-  place-content: center;
-}
-
-.child-center > * {
-  justify-self: center;
+.gap, .grid-gap, .flex-gap {
+  gap: $padding;
 }
 
 .grid-even-columns {
@@ -57,8 +186,9 @@
 
 .card {
   padding: $padding / 2;
-  background-color: $neutral-light;
   border-radius: 8px;
+  border: $divider-size solid $divider-color;
+  box-shadow: $boxshadow;
 }
 
 @mixin golden-grid {

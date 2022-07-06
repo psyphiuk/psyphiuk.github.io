@@ -20,6 +20,10 @@
   width: 100vw;
 }
 
+.full-width-less-padding {
+  width: calc(100vw - $padding * 2);
+}
+
 .full-height {
   height: 100%;
 }
@@ -35,6 +39,8 @@
 .title-max {
   max-width: $max-title-width;
 }
+
+
 
 .up-20 {
   transform: translateY(-20%);

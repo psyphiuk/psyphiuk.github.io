@@ -12,14 +12,49 @@
  *  font colours
  */
 /*
+ * dark theme
+ */
+/*
  *  Colours for specific components
  */
 .primary {
   color: #e2a030;
 }
 
+.secondary {
+  color: #3072e2;
+}
+
+.accent {
+  color: #b6cdf5;
+}
+
+.neutral {
+  color: #c0bdb8;
+}
+
+.text {
+  color: #090909;
+}
+
 .bg-primary {
   background-color: #e2a030;
+}
+
+.bg-secondary {
+  background-color: #3072e2;
+}
+
+.bg-accent {
+  background-color: #b6cdf5;
+}
+
+.bg-neutral {
+  background-color: #c0bdb8;
+}
+
+.bg-text {
+  background-color: #090909;
 }
 
 .bg-neutral-light {
@@ -78,6 +113,7 @@ ul:not([role=list]) {
 }
 
 a:not([role=link]) {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -99,6 +135,10 @@ a:not([role=link]) {
 
 .full-width {
   width: 100vw;
+}
+
+.full-width-less-padding {
+  width: calc(100vw - 4rem);
 }
 
 .full-height {
@@ -167,24 +207,1102 @@ a:not([role=link]) {
   top: 2rem;
 }
 
-.gap, .grid-gap, .flex-gap {
-  gap: 2rem;
+.jc-start, .jc-flex-start, .jc-grid-start {
+  justify-content: start;
+}
+
+.jc-center, .jc-flex-center, .jc-grid-center {
+  justify-content: center;
+}
+
+.jc-end, .jc-flex-end, .jc-grid-end {
+  justify-content: end;
+}
+
+.jc-between, .jc-flex-between, .jc-grid-between {
+  justify-content: space-between;
+}
+
+.jc-around, .jc-flex-around, .jc-grid-around {
+  justify-content: space-around;
+}
+
+.jc-evenly, .jc-flex-evenly, .jc-grid-evenly {
+  justify-content: space-evenly;
+}
+
+.jc-stretch, .jc-flex-stretch, .jc-grid-stretch {
+  justify-content: stretch;
+}
+
+.ji-stretch, .ji-flex-stretch, .ji-grid-stretch {
+  justify-items: stretch;
+}
+
+.ji-start, .ji-flex-start, .ji-grid-start {
+  justify-items: start;
+}
+
+.ji-center, .ji-flex-center, .ji-grid-center {
+  justify-items: center;
+}
+
+.ji-end, .ji-flex-end, .ji-grid-end {
+  justify-items: end;
+}
+
+.ji-baseline, .ji-flex-baseline, .ji-grid-baseline {
+  justify-items: baseline;
+}
+
+.js-auto, .js-flex-auto, .js-grid-auto {
+  justify-items: auto;
+}
+
+.js-stretch, .js-flex-stretch, .js-grid-stretch {
+  justify-items: stretch;
+}
+
+.js-start, .js-flex-start, .js-grid-start {
+  justify-items: start;
+}
+
+.js-center, .js-flex-center, .js-grid-center {
+  justify-items: center;
+}
+
+.js-end, .js-flex-end, .js-grid-end {
+  justify-items: end;
+}
+
+.js-baseline, .js-flex-baseline, .js-grid-baseline {
+  justify-items: baseline;
+}
+
+.cjs-auto > *, .cjs-flex-auto > *, .cjs-grid-auto > * {
+  justify-items: auto;
+}
+
+.cjs-stretch > *, .cjs-flex-stretch > *, .cjs-grid-stretch > * {
+  justify-items: stretch;
+}
+
+.cjs-start > *, .cjs-flex-start > *, .cjs-grid-start > * {
+  justify-items: start;
+}
+
+.cjs-center > *, .cjs-flex-center > *, .cjs-grid-center > * {
+  justify-items: center;
+}
+
+.cjs-end > *, .cjs-flex-end > *, .cjs-grid-end > * {
+  justify-items: end;
+}
+
+.cjs-baseline > *, .cjs-flex-baseline > *, .cjs-grid-baseline > * {
+  justify-items: baseline;
+}
+
+.ac-start, .ac-flex-start, .ac-grid-start {
+  align-content: start;
+}
+
+.ac-center, .ac-flex-center, .ac-grid-center {
+  align-content: center;
+}
+
+.ac-end, .ac-flex-end, .ac-grid-end {
+  align-content: end;
+}
+
+.ac-baseline, .ac-flex-baseline, .ac-grid-baseline {
+  align-content: baseline;
+}
+
+.ac-between, .ac-flex-between, .ac-grid-between {
+  align-content: space-between;
+}
+
+.ac-around, .ac-flex-around, .ac-grid-around {
+  align-content: space-around;
+}
+
+.ac-evenly, .ac-flex-evenly, .ac-grid-evenly {
+  align-content: space-evenly;
+}
+
+.ac-stretch, .ac-flex-stretch, .ac-grid-stretch {
+  align-content: stretch;
+}
+
+.ai-stretch, .ai-flex-stretch, .ai-grid-stretch {
+  align-items: stretch;
+}
+
+.ai-start, .ai-flex-start, .ai-grid-start {
+  align-items: start;
+}
+
+.ai-center, .ai-flex-center, .ai-grid-center {
+  align-items: center;
+}
+
+.ai-end, .ai-flex-end, .ai-grid-end {
+  align-items: end;
+}
+
+.ai-baseline, .ai-flex-baseline, .ai-grid-baseline {
+  align-items: baseline;
+}
+
+.as-auto, .as-flex-auto, .as-grid-auto {
+  align-items: auto;
+}
+
+.as-stretch, .as-flex-stretch, .as-grid-stretch {
+  align-items: stretch;
+}
+
+.as-start, .as-flex-start, .as-grid-start {
+  align-items: start;
+}
+
+.as-center, .as-flex-center, .as-grid-center {
+  align-items: center;
+}
+
+.as-end, .as-flex-end, .as-grid-end {
+  align-items: end;
+}
+
+.as-baseline, .as-flex-baseline, .as-grid-baseline {
+  align-items: baseline;
+}
+
+.pc-start-start,
+.pc-flex-start-start,
+.pc-grid-start-start {
+  place-content: start start;
+}
+
+.pc-start-center,
+.pc-flex-start-center,
+.pc-grid-start-center {
+  place-content: start center;
+}
+
+.pc-start-end,
+.pc-flex-start-end,
+.pc-grid-start-end {
+  place-content: start end;
+}
+
+.pc-start-between,
+.pc-flex-start-between,
+.pc-grid-start-between {
+  place-content: start space-between;
+}
+
+.pc-start-around,
+.pc-flex-start-around,
+.pc-grid-start-around {
+  place-content: start space-around;
+}
+
+.pc-start-evenly,
+.pc-flex-start-evenly,
+.pc-grid-start-evenly {
+  place-content: start space-evenly;
+}
+
+.pc-start-stretch,
+.pc-flex-start-stretch,
+.pc-grid-start-stretch {
+  place-content: start stretch;
+}
+
+.pc-center-start,
+.pc-flex-center-start,
+.pc-grid-center-start {
+  place-content: center start;
+}
+
+.pc-center-center,
+.pc-flex-center-center,
+.pc-grid-center-center {
+  place-content: center center;
+}
+
+.pc-center-end,
+.pc-flex-center-end,
+.pc-grid-center-end {
+  place-content: center end;
+}
+
+.pc-center-between,
+.pc-flex-center-between,
+.pc-grid-center-between {
+  place-content: center space-between;
+}
+
+.pc-center-around,
+.pc-flex-center-around,
+.pc-grid-center-around {
+  place-content: center space-around;
+}
+
+.pc-center-evenly,
+.pc-flex-center-evenly,
+.pc-grid-center-evenly {
+  place-content: center space-evenly;
+}
+
+.pc-center-stretch,
+.pc-flex-center-stretch,
+.pc-grid-center-stretch {
+  place-content: center stretch;
+}
+
+.pc-end-start,
+.pc-flex-end-start,
+.pc-grid-end-start {
+  place-content: end start;
+}
+
+.pc-end-center,
+.pc-flex-end-center,
+.pc-grid-end-center {
+  place-content: end center;
+}
+
+.pc-end-end,
+.pc-flex-end-end,
+.pc-grid-end-end {
+  place-content: end end;
+}
+
+.pc-end-between,
+.pc-flex-end-between,
+.pc-grid-end-between {
+  place-content: end space-between;
+}
+
+.pc-end-around,
+.pc-flex-end-around,
+.pc-grid-end-around {
+  place-content: end space-around;
+}
+
+.pc-end-evenly,
+.pc-flex-end-evenly,
+.pc-grid-end-evenly {
+  place-content: end space-evenly;
+}
+
+.pc-end-stretch,
+.pc-flex-end-stretch,
+.pc-grid-end-stretch {
+  place-content: end stretch;
+}
+
+.pc-baseline-start,
+.pc-flex-baseline-start,
+.pc-grid-baseline-start {
+  place-content: baseline start;
+}
+
+.pc-baseline-center,
+.pc-flex-baseline-center,
+.pc-grid-baseline-center {
+  place-content: baseline center;
+}
+
+.pc-baseline-end,
+.pc-flex-baseline-end,
+.pc-grid-baseline-end {
+  place-content: baseline end;
+}
+
+.pc-baseline-between,
+.pc-flex-baseline-between,
+.pc-grid-baseline-between {
+  place-content: baseline space-between;
+}
+
+.pc-baseline-around,
+.pc-flex-baseline-around,
+.pc-grid-baseline-around {
+  place-content: baseline space-around;
+}
+
+.pc-baseline-evenly,
+.pc-flex-baseline-evenly,
+.pc-grid-baseline-evenly {
+  place-content: baseline space-evenly;
+}
+
+.pc-baseline-stretch,
+.pc-flex-baseline-stretch,
+.pc-grid-baseline-stretch {
+  place-content: baseline stretch;
+}
+
+.pc-between-start,
+.pc-flex-between-start,
+.pc-grid-between-start {
+  place-content: space-between start;
+}
+
+.pc-between-center,
+.pc-flex-between-center,
+.pc-grid-between-center {
+  place-content: space-between center;
+}
+
+.pc-between-end,
+.pc-flex-between-end,
+.pc-grid-between-end {
+  place-content: space-between end;
+}
+
+.pc-between-between,
+.pc-flex-between-between,
+.pc-grid-between-between {
+  place-content: space-between space-between;
+}
+
+.pc-between-around,
+.pc-flex-between-around,
+.pc-grid-between-around {
+  place-content: space-between space-around;
+}
+
+.pc-between-evenly,
+.pc-flex-between-evenly,
+.pc-grid-between-evenly {
+  place-content: space-between space-evenly;
+}
+
+.pc-between-stretch,
+.pc-flex-between-stretch,
+.pc-grid-between-stretch {
+  place-content: space-between stretch;
+}
+
+.pc-around-start,
+.pc-flex-around-start,
+.pc-grid-around-start {
+  place-content: space-around start;
+}
+
+.pc-around-center,
+.pc-flex-around-center,
+.pc-grid-around-center {
+  place-content: space-around center;
+}
+
+.pc-around-end,
+.pc-flex-around-end,
+.pc-grid-around-end {
+  place-content: space-around end;
+}
+
+.pc-around-between,
+.pc-flex-around-between,
+.pc-grid-around-between {
+  place-content: space-around space-between;
+}
+
+.pc-around-around,
+.pc-flex-around-around,
+.pc-grid-around-around {
+  place-content: space-around space-around;
+}
+
+.pc-around-evenly,
+.pc-flex-around-evenly,
+.pc-grid-around-evenly {
+  place-content: space-around space-evenly;
+}
+
+.pc-around-stretch,
+.pc-flex-around-stretch,
+.pc-grid-around-stretch {
+  place-content: space-around stretch;
+}
+
+.pc-evenly-start,
+.pc-flex-evenly-start,
+.pc-grid-evenly-start {
+  place-content: space-evenly start;
+}
+
+.pc-evenly-center,
+.pc-flex-evenly-center,
+.pc-grid-evenly-center {
+  place-content: space-evenly center;
+}
+
+.pc-evenly-end,
+.pc-flex-evenly-end,
+.pc-grid-evenly-end {
+  place-content: space-evenly end;
+}
+
+.pc-evenly-between,
+.pc-flex-evenly-between,
+.pc-grid-evenly-between {
+  place-content: space-evenly space-between;
+}
+
+.pc-evenly-around,
+.pc-flex-evenly-around,
+.pc-grid-evenly-around {
+  place-content: space-evenly space-around;
+}
+
+.pc-evenly-evenly,
+.pc-flex-evenly-evenly,
+.pc-grid-evenly-evenly {
+  place-content: space-evenly space-evenly;
+}
+
+.pc-evenly-stretch,
+.pc-flex-evenly-stretch,
+.pc-grid-evenly-stretch {
+  place-content: space-evenly stretch;
+}
+
+.pc-stretch-start,
+.pc-flex-stretch-start,
+.pc-grid-stretch-start {
+  place-content: stretch start;
+}
+
+.pc-stretch-center,
+.pc-flex-stretch-center,
+.pc-grid-stretch-center {
+  place-content: stretch center;
+}
+
+.pc-stretch-end,
+.pc-flex-stretch-end,
+.pc-grid-stretch-end {
+  place-content: stretch end;
+}
+
+.pc-stretch-between,
+.pc-flex-stretch-between,
+.pc-grid-stretch-between {
+  place-content: stretch space-between;
+}
+
+.pc-stretch-around,
+.pc-flex-stretch-around,
+.pc-grid-stretch-around {
+  place-content: stretch space-around;
+}
+
+.pc-stretch-evenly,
+.pc-flex-stretch-evenly,
+.pc-grid-stretch-evenly {
+  place-content: stretch space-evenly;
+}
+
+.pc-stretch-stretch,
+.pc-flex-stretch-stretch,
+.pc-grid-stretch-stretch {
+  place-content: stretch stretch;
+}
+
+.pi-stretch-stretch,
+.pi-flex-stretch-stretch,
+.pi-grid-stretch-stretch {
+  place-items: stretch stretch;
+}
+
+.pi-stretch-start,
+.pi-flex-stretch-start,
+.pi-grid-stretch-start {
+  place-items: stretch start;
+}
+
+.pi-stretch-center,
+.pi-flex-stretch-center,
+.pi-grid-stretch-center {
+  place-items: stretch center;
+}
+
+.pi-stretch-end,
+.pi-flex-stretch-end,
+.pi-grid-stretch-end {
+  place-items: stretch end;
+}
+
+.pi-stretch-baseline,
+.pi-flex-stretch-baseline,
+.pi-grid-stretch-baseline {
+  place-items: stretch baseline;
+}
+
+.pi-start-stretch,
+.pi-flex-start-stretch,
+.pi-grid-start-stretch {
+  place-items: start stretch;
+}
+
+.pi-start-start,
+.pi-flex-start-start,
+.pi-grid-start-start {
+  place-items: start start;
+}
+
+.pi-start-center,
+.pi-flex-start-center,
+.pi-grid-start-center {
+  place-items: start center;
+}
+
+.pi-start-end,
+.pi-flex-start-end,
+.pi-grid-start-end {
+  place-items: start end;
+}
+
+.pi-start-baseline,
+.pi-flex-start-baseline,
+.pi-grid-start-baseline {
+  place-items: start baseline;
+}
+
+.pi-center-stretch,
+.pi-flex-center-stretch,
+.pi-grid-center-stretch {
+  place-items: center stretch;
+}
+
+.pi-center-start,
+.pi-flex-center-start,
+.pi-grid-center-start {
+  place-items: center start;
+}
+
+.pi-center-center,
+.pi-flex-center-center,
+.pi-grid-center-center {
+  place-items: center center;
+}
+
+.pi-center-end,
+.pi-flex-center-end,
+.pi-grid-center-end {
+  place-items: center end;
+}
+
+.pi-center-baseline,
+.pi-flex-center-baseline,
+.pi-grid-center-baseline {
+  place-items: center baseline;
+}
+
+.pi-end-stretch,
+.pi-flex-end-stretch,
+.pi-grid-end-stretch {
+  place-items: end stretch;
+}
+
+.pi-end-start,
+.pi-flex-end-start,
+.pi-grid-end-start {
+  place-items: end start;
+}
+
+.pi-end-center,
+.pi-flex-end-center,
+.pi-grid-end-center {
+  place-items: end center;
+}
+
+.pi-end-end,
+.pi-flex-end-end,
+.pi-grid-end-end {
+  place-items: end end;
+}
+
+.pi-end-baseline,
+.pi-flex-end-baseline,
+.pi-grid-end-baseline {
+  place-items: end baseline;
+}
+
+.pi-baseline-stretch,
+.pi-flex-baseline-stretch,
+.pi-grid-baseline-stretch {
+  place-items: baseline stretch;
+}
+
+.pi-baseline-start,
+.pi-flex-baseline-start,
+.pi-grid-baseline-start {
+  place-items: baseline start;
+}
+
+.pi-baseline-center,
+.pi-flex-baseline-center,
+.pi-grid-baseline-center {
+  place-items: baseline center;
+}
+
+.pi-baseline-end,
+.pi-flex-baseline-end,
+.pi-grid-baseline-end {
+  place-items: baseline end;
+}
+
+.pi-baseline-baseline,
+.pi-flex-baseline-baseline,
+.pi-grid-baseline-baseline {
+  place-items: baseline baseline;
+}
+
+.ps-auto-auto,
+.ps-flex-auto-auto,
+.ps-grid-auto-auto {
+  place-self: auto auto;
+}
+
+.ps-auto-stretch,
+.ps-flex-auto-stretch,
+.ps-grid-auto-stretch {
+  place-self: auto stretch;
+}
+
+.ps-auto-start,
+.ps-flex-auto-start,
+.ps-grid-auto-start {
+  place-self: auto start;
+}
+
+.ps-auto-center,
+.ps-flex-auto-center,
+.ps-grid-auto-center {
+  place-self: auto center;
+}
+
+.ps-auto-end,
+.ps-flex-auto-end,
+.ps-grid-auto-end {
+  place-self: auto end;
+}
+
+.ps-auto-baseline,
+.ps-flex-auto-baseline,
+.ps-grid-auto-baseline {
+  place-self: auto baseline;
+}
+
+.ps-stretch-auto,
+.ps-flex-stretch-auto,
+.ps-grid-stretch-auto {
+  place-self: stretch auto;
+}
+
+.ps-stretch-stretch,
+.ps-flex-stretch-stretch,
+.ps-grid-stretch-stretch {
+  place-self: stretch stretch;
+}
+
+.ps-stretch-start,
+.ps-flex-stretch-start,
+.ps-grid-stretch-start {
+  place-self: stretch start;
+}
+
+.ps-stretch-center,
+.ps-flex-stretch-center,
+.ps-grid-stretch-center {
+  place-self: stretch center;
+}
+
+.ps-stretch-end,
+.ps-flex-stretch-end,
+.ps-grid-stretch-end {
+  place-self: stretch end;
+}
+
+.ps-stretch-baseline,
+.ps-flex-stretch-baseline,
+.ps-grid-stretch-baseline {
+  place-self: stretch baseline;
+}
+
+.ps-start-auto,
+.ps-flex-start-auto,
+.ps-grid-start-auto {
+  place-self: start auto;
+}
+
+.ps-start-stretch,
+.ps-flex-start-stretch,
+.ps-grid-start-stretch {
+  place-self: start stretch;
+}
+
+.ps-start-start,
+.ps-flex-start-start,
+.ps-grid-start-start {
+  place-self: start start;
+}
+
+.ps-start-center,
+.ps-flex-start-center,
+.ps-grid-start-center {
+  place-self: start center;
+}
+
+.ps-start-end,
+.ps-flex-start-end,
+.ps-grid-start-end {
+  place-self: start end;
+}
+
+.ps-start-baseline,
+.ps-flex-start-baseline,
+.ps-grid-start-baseline {
+  place-self: start baseline;
+}
+
+.ps-center-auto,
+.ps-flex-center-auto,
+.ps-grid-center-auto {
+  place-self: center auto;
+}
+
+.ps-center-stretch,
+.ps-flex-center-stretch,
+.ps-grid-center-stretch {
+  place-self: center stretch;
+}
+
+.ps-center-start,
+.ps-flex-center-start,
+.ps-grid-center-start {
+  place-self: center start;
+}
+
+.ps-center-center,
+.ps-flex-center-center,
+.ps-grid-center-center {
+  place-self: center center;
+}
+
+.ps-center-end,
+.ps-flex-center-end,
+.ps-grid-center-end {
+  place-self: center end;
+}
+
+.ps-center-baseline,
+.ps-flex-center-baseline,
+.ps-grid-center-baseline {
+  place-self: center baseline;
+}
+
+.ps-end-auto,
+.ps-flex-end-auto,
+.ps-grid-end-auto {
+  place-self: end auto;
+}
+
+.ps-end-stretch,
+.ps-flex-end-stretch,
+.ps-grid-end-stretch {
+  place-self: end stretch;
+}
+
+.ps-end-start,
+.ps-flex-end-start,
+.ps-grid-end-start {
+  place-self: end start;
+}
+
+.ps-end-center,
+.ps-flex-end-center,
+.ps-grid-end-center {
+  place-self: end center;
+}
+
+.ps-end-end,
+.ps-flex-end-end,
+.ps-grid-end-end {
+  place-self: end end;
+}
+
+.ps-end-baseline,
+.ps-flex-end-baseline,
+.ps-grid-end-baseline {
+  place-self: end baseline;
+}
+
+.ps-baseline-auto,
+.ps-flex-baseline-auto,
+.ps-grid-baseline-auto {
+  place-self: baseline auto;
+}
+
+.ps-baseline-stretch,
+.ps-flex-baseline-stretch,
+.ps-grid-baseline-stretch {
+  place-self: baseline stretch;
+}
+
+.ps-baseline-start,
+.ps-flex-baseline-start,
+.ps-grid-baseline-start {
+  place-self: baseline start;
+}
+
+.ps-baseline-center,
+.ps-flex-baseline-center,
+.ps-grid-baseline-center {
+  place-self: baseline center;
+}
+
+.ps-baseline-end,
+.ps-flex-baseline-end,
+.ps-grid-baseline-end {
+  place-self: baseline end;
+}
+
+.ps-baseline-baseline,
+.ps-flex-baseline-baseline,
+.ps-grid-baseline-baseline {
+  place-self: baseline baseline;
+}
+
+.cps-auto-auto > *,
+.cps-flex-auto-auto > *,
+.cps-grid-auto-auto > * {
+  place-self: auto auto;
+}
+
+.cps-auto-stretch > *,
+.cps-flex-auto-stretch > *,
+.cps-grid-auto-stretch > * {
+  place-self: auto stretch;
+}
+
+.cps-auto-start > *,
+.cps-flex-auto-start > *,
+.cps-grid-auto-start > * {
+  place-self: auto start;
+}
+
+.cps-auto-center > *,
+.cps-flex-auto-center > *,
+.cps-grid-auto-center > * {
+  place-self: auto center;
+}
+
+.cps-auto-end > *,
+.cps-flex-auto-end > *,
+.cps-grid-auto-end > * {
+  place-self: auto end;
+}
+
+.cps-auto-baseline > *,
+.cps-flex-auto-baseline > *,
+.cps-grid-auto-baseline > * {
+  place-self: auto baseline;
+}
+
+.cps-stretch-auto > *,
+.cps-flex-stretch-auto > *,
+.cps-grid-stretch-auto > * {
+  place-self: stretch auto;
+}
+
+.cps-stretch-stretch > *,
+.cps-flex-stretch-stretch > *,
+.cps-grid-stretch-stretch > * {
+  place-self: stretch stretch;
+}
+
+.cps-stretch-start > *,
+.cps-flex-stretch-start > *,
+.cps-grid-stretch-start > * {
+  place-self: stretch start;
+}
+
+.cps-stretch-center > *,
+.cps-flex-stretch-center > *,
+.cps-grid-stretch-center > * {
+  place-self: stretch center;
+}
+
+.cps-stretch-end > *,
+.cps-flex-stretch-end > *,
+.cps-grid-stretch-end > * {
+  place-self: stretch end;
+}
+
+.cps-stretch-baseline > *,
+.cps-flex-stretch-baseline > *,
+.cps-grid-stretch-baseline > * {
+  place-self: stretch baseline;
+}
+
+.cps-start-auto > *,
+.cps-flex-start-auto > *,
+.cps-grid-start-auto > * {
+  place-self: start auto;
+}
+
+.cps-start-stretch > *,
+.cps-flex-start-stretch > *,
+.cps-grid-start-stretch > * {
+  place-self: start stretch;
+}
+
+.cps-start-start > *,
+.cps-flex-start-start > *,
+.cps-grid-start-start > * {
+  place-self: start start;
+}
+
+.cps-start-center > *,
+.cps-flex-start-center > *,
+.cps-grid-start-center > * {
+  place-self: start center;
+}
+
+.cps-start-end > *,
+.cps-flex-start-end > *,
+.cps-grid-start-end > * {
+  place-self: start end;
+}
+
+.cps-start-baseline > *,
+.cps-flex-start-baseline > *,
+.cps-grid-start-baseline > * {
+  place-self: start baseline;
+}
+
+.cps-center-auto > *,
+.cps-flex-center-auto > *,
+.cps-grid-center-auto > * {
+  place-self: center auto;
+}
+
+.cps-center-stretch > *,
+.cps-flex-center-stretch > *,
+.cps-grid-center-stretch > * {
+  place-self: center stretch;
+}
+
+.cps-center-start > *,
+.cps-flex-center-start > *,
+.cps-grid-center-start > * {
+  place-self: center start;
+}
+
+.cps-center-center > *,
+.cps-flex-center-center > *,
+.cps-grid-center-center > * {
+  place-self: center center;
+}
+
+.cps-center-end > *,
+.cps-flex-center-end > *,
+.cps-grid-center-end > * {
+  place-self: center end;
+}
+
+.cps-center-baseline > *,
+.cps-flex-center-baseline > *,
+.cps-grid-center-baseline > * {
+  place-self: center baseline;
+}
+
+.cps-end-auto > *,
+.cps-flex-end-auto > *,
+.cps-grid-end-auto > * {
+  place-self: end auto;
+}
+
+.cps-end-stretch > *,
+.cps-flex-end-stretch > *,
+.cps-grid-end-stretch > * {
+  place-self: end stretch;
+}
+
+.cps-end-start > *,
+.cps-flex-end-start > *,
+.cps-grid-end-start > * {
+  place-self: end start;
+}
+
+.cps-end-center > *,
+.cps-flex-end-center > *,
+.cps-grid-end-center > * {
+  place-self: end center;
+}
+
+.cps-end-end > *,
+.cps-flex-end-end > *,
+.cps-grid-end-end > * {
+  place-self: end end;
+}
+
+.cps-end-baseline > *,
+.cps-flex-end-baseline > *,
+.cps-grid-end-baseline > * {
+  place-self: end baseline;
+}
+
+.cps-baseline-auto > *,
+.cps-flex-baseline-auto > *,
+.cps-grid-baseline-auto > * {
+  place-self: baseline auto;
+}
+
+.cps-baseline-stretch > *,
+.cps-flex-baseline-stretch > *,
+.cps-grid-baseline-stretch > * {
+  place-self: baseline stretch;
+}
+
+.cps-baseline-start > *,
+.cps-flex-baseline-start > *,
+.cps-grid-baseline-start > * {
+  place-self: baseline start;
+}
+
+.cps-baseline-center > *,
+.cps-flex-baseline-center > *,
+.cps-grid-baseline-center > * {
+  place-self: baseline center;
+}
+
+.cps-baseline-end > *,
+.cps-flex-baseline-end > *,
+.cps-grid-baseline-end > * {
+  place-self: baseline end;
+}
+
+.cps-baseline-baseline > *,
+.cps-flex-baseline-baseline > *,
+.cps-grid-baseline-baseline > * {
+  place-self: baseline baseline;
 }
 
 [class*=grid] {
   display: grid;
 }
 
-.between, .grid-between, .flex-between {
-  justify-content: space-between;
-}
-
-.centered, .grid-centered {
-  place-content: center;
-}
-
-.child-center > * {
-  justify-self: center;
+.gap, .grid-gap, .flex-gap {
+  gap: 2rem;
 }
 
 .grid-even-columns {
@@ -216,8 +1334,9 @@ a:not([role=link]) {
 
 .card {
   padding: 1rem;
-  background-color: #f0efee;
   border-radius: 8px;
+  border: 2px solid #b6cdf5;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1882352941);
 }
 
 .golden-grid {
@@ -296,6 +1415,7 @@ details > details > summary {
 
 .hero-image {
   position: relative;
+  /* dark theme */
 }
 .hero-image.shell {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/golden-shell.jpg");
