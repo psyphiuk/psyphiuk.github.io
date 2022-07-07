@@ -11,7 +11,7 @@ $justify-content: (
 );
 
 @each $name, $value in $justify-content {
-  .jc-#{$name}, .jc-flex-#{$name}, .jc-grid-#{$name} {
+  .jc-#{$name}, .flex-jc-#{$name}, .grid-jc-#{$name} {
     justify-content: $value;
   }
 }
@@ -25,7 +25,7 @@ $justify-items: (
 );
 
 @each $name, $value in $justify-items {
-  .ji-#{$name}, .ji-flex-#{$name}, .ji-grid-#{$name} {
+  .ji-#{$name}, .flex-ji-#{$name}, .grid-ji-#{$name} {
     justify-items: $value;
   }
 }
@@ -40,13 +40,13 @@ $justify-self: (
 );
 
 @each $name, $value in $justify-self {
-  .js-#{$name}, .js-flex-#{$name}, .js-grid-#{$name} {
+  .js-#{$name}, .flex-js-#{$name}, .grid-js-#{$name} {
     justify-items: $value;
   }
 }
 
 @each $name, $value in $justify-self {
-  .cjs-#{$name}, .cjs-flex-#{$name}, .cjs-grid-#{$name} {
+  .cjs-#{$name}, .flex-cjs-#{$name}, .grid-cjs-#{$name} {
     > * {
       justify-items: $value;
     }
@@ -65,7 +65,7 @@ $align-content: (
 );
 
 @each $name, $value in $align-content {
-  .ac-#{$name}, .ac-flex-#{$name}, .ac-grid-#{$name} {
+  .ac-#{$name}, .flex-ac-#{$name}, .grid-ac-#{$name} {
     align-content: $value;
   }
 }
@@ -79,7 +79,7 @@ $align-items: (
 );
 
 @each $name, $value in $align-items {
-  .ai-#{$name}, .ai-flex-#{$name}, .ai-grid-#{$name} {
+  .ai-#{$name}, .flex-ai-#{$name}, .grid-ai-#{$name} {
     align-items: $value;
   }
 }
@@ -94,7 +94,7 @@ $align-self: (
 );
 
 @each $name, $value in $align-self {
-  .as-#{$name}, .as-flex-#{$name}, .as-grid-#{$name} {
+  .as-#{$name}, .flex-as-#{$name}, .grid-as-#{$name} {
     align-items: $value;
   }
 }
@@ -102,8 +102,8 @@ $align-self: (
 @each $aname, $avalue in $align-content {
   @each $jname, $jvalue in $justify-content {
     .pc-#{$aname}-#{$jname},
-    .pc-flex-#{$aname}-#{$jname},
-    .pc-grid-#{$aname}-#{$jname} {
+    .flex-pc-#{$aname}-#{$jname},
+    .grid-pc-#{$aname}-#{$jname} {
       place-content: $avalue $jvalue;
     }
   }
@@ -112,8 +112,8 @@ $align-self: (
 @each $aname, $avalue in $align-items {
   @each $jname, $jvalue in $justify-items {
     .pi-#{$aname}-#{$jname},
-    .pi-flex-#{$aname}-#{$jname},
-    .pi-grid-#{$aname}-#{$jname} {
+    .flex-pi-#{$aname}-#{$jname},
+    .grid-pi-#{$aname}-#{$jname} {
       place-items: $avalue $jvalue;
     }
   }
@@ -122,8 +122,8 @@ $align-self: (
 @each $aname, $avalue in $align-self {
   @each $jname, $jvalue in $justify-self {
     .ps-#{$aname}-#{$jname},
-    .ps-flex-#{$aname}-#{$jname},
-    .ps-grid-#{$aname}-#{$jname} {
+    .flex-ps-#{$aname}-#{$jname},
+    .grid-ps-#{$aname}-#{$jname} {
       place-self: $avalue $jvalue;
     }
   }
@@ -132,8 +132,8 @@ $align-self: (
 @each $aname, $avalue in $align-self {
   @each $jname, $jvalue in $justify-self {
     .cps-#{$aname}-#{$jname},
-    .cps-flex-#{$aname}-#{$jname},
-    .cps-grid-#{$aname}-#{$jname} {
+    .flex-cps-#{$aname}-#{$jname},
+    .grid-cps-#{$aname}-#{$jname} {
       > * {
         place-self: $avalue $jvalue;
       }

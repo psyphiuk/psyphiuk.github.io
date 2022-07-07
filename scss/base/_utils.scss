@@ -46,6 +46,47 @@
   transform: translateY(-20%);
 }
 
+$padding-sizes: (
+  none: 0,
+  xxs: $padding / 8,
+  xs: $padding / 4,
+  sm: $padding / 2,
+  md: $padding,
+  lg: $padding * 2,
+  xl: $padding * 4,
+  xxl: $padding * 8,
+);
+
+$padding-direction: ( left, right, top , bottom );
+
+@each $name, $value in $padding-sizes {
+  .padding-#{$name} {
+    padding: $value;
+  }
+}
+
+@each $direction in $padding-direction {
+  @each $name, $value in $padding-sizes {
+    .padding-#{$direction}-#{$name} {
+      padding-#{$direction}: $value;
+    }
+  }
+}
+
+@each $name, $value in $padding-sizes {
+  .margin-#{$name} {
+    padding: $value;
+  }
+}
+
+@each $direction in $padding-direction {
+  @each $name, $value in $padding-sizes {
+    .margin-#{$direction}-#{$name} {
+      padding-#{$direction}: $value;
+    }
+  }
+}
+
 .padding {
   padding: $padding;
 }
